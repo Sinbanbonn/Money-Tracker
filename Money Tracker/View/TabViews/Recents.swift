@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct Recents: View {
-    /// User Properties
+    // MARK: - User Properties
     @AppStorage("userName") private var userName: String = ""
-    /// View Properties
+    
+    // MARK: -  View Properties
     @State private var startDate: Date = .now.startOfMonth
     @State private var endDate: Date = .now.endOfMonth
+    @State private var showFilterView: Bool = false
+    @State private var selectedCateory: Category = .expense
+    
+    // MARK: - Animation Properties
+    @Namespace private var animation
     
     var body: some View {
         GeometryReader {
@@ -23,21 +29,49 @@ struct Recents: View {
                     LazyVStack(spacing: 10, pinnedViews: [.sectionHeaders]) {
                         Section {
                             Button {
-                                
+                                showFilterView = true
                             } label: {
                                 Text("\(format(date: startDate, format: "dd -- MMM yy")) to \(format(date: endDate, format: "dd -- MMM yy"))")
                                     .font(.caption2)
                                     .foregroundStyle(.gray)
                             }
                             .hSpacing(.leading)
-
+                            
+                            /// Card View
+                            CardView(income: 2039, expense: 4058)
+                            
+                            /// Custom Segmented Control
+                            CustomSegmentedControl()
+                                .padding(.bottom, 10)
+                            
+                            ForEach(sampleTransactions.filter({$0.category == selectedCateory.rawValue})) { transaction in
+                                TransactionCardView(transaction: transaction)
+                                
+                            }
                         } header: {
                             headerView(size)
                         }
                     }
                     .padding(15)
                 }
+                .background(.gray.opacity(0.15))
+                .blur(radius: showFilterView ? 5 : 0)
+                .disabled(showFilterView)
             }
+            .overlay {
+                if showFilterView {
+                    DateFilterView(start: startDate, end: endDate, onSubmit: {
+                        start, end in
+                        startDate = start
+                        endDate = end
+                        showFilterView = false
+                    }, onClose: {
+                        showFilterView = false
+                    })
+                    .transition(.move(edge: .leading))
+                }
+            }
+            .animation(.snappy, value: showFilterView)
         }
     }
     
@@ -90,6 +124,33 @@ struct Recents: View {
             .padding(.top, -(safeArea.top + 15))
         }
         
+    }
+    
+    /// Segmented Control
+    @ViewBuilder
+    func CustomSegmentedControl() -> some View {
+        HStack(spacing: 0) {
+            ForEach(Category.allCases, id: \.rawValue) { category in
+                Text(category.rawValue)
+                    .hSpacing()
+                    .padding(.vertical, 10)
+                    .background {
+                        if category == selectedCateory{
+                            Capsule()
+                                .fill(.background)
+                                .matchedGeometryEffect(id: "ACTIVETAB", in: animation)
+                        }
+                    }
+                    .contentShape(.capsule)
+                    .onTapGesture {
+                        withAnimation(.snappy) {
+                            selectedCateory = category
+                        }
+                    }
+            }
+        }
+        .background(.gray.opacity(0.15), in: .capsule)
+        .padding(.top, 5)
     }
     
     func headerBGOpacity(_ proxy: GeometryProxy) -> CGFloat {

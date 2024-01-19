@@ -24,6 +24,10 @@
 		0DBFB5002B5940310091D9EC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4FF2B5940310091D9EC /* Settings.swift */; };
 		0DBFB5022B5945F10091D9EC /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB5012B5945F10091D9EC /* View+Extensions.swift */; };
 		0DBFB5042B5980850091D9EC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB5032B5980850091D9EC /* Date+Extensions.swift */; };
+		0DBFB5072B59CDF20091D9EC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB5062B59CDF20091D9EC /* CardView.swift */; };
+		0DBFB5092B59D9050091D9EC /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB5082B59D9050091D9EC /* TransactionCardView.swift */; };
+		0DBFB50B2B5A82E40091D9EC /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB50A2B5A82E40091D9EC /* SwipeAction.swift */; };
+		0DBFB50D2B5A851A0091D9EC /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB50C2B5A851A0091D9EC /* DateFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		0DBFB4FF2B5940310091D9EC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0DBFB5012B5945F10091D9EC /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		0DBFB5032B5980850091D9EC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		0DBFB5062B59CDF20091D9EC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0DBFB5082B59D9050091D9EC /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		0DBFB50A2B5A82E40091D9EC /* SwipeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		0DBFB50C2B5A851A0091D9EC /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		0DBFB4EA2B4D4F1A0091D9EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DBFB5052B59CDE30091D9EC /* Helpers */,
 				0DBFB4F82B593FAB0091D9EC /* TabViews */,
 				0DBFB4EB2B4D4F4C0091D9EC /* InfoScreen.swift */,
 			);
@@ -136,6 +145,17 @@
 				0DBFB4FF2B5940310091D9EC /* Settings.swift */,
 			);
 			path = TabViews;
+			sourceTree = "<group>";
+		};
+		0DBFB5052B59CDE30091D9EC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0DBFB50A2B5A82E40091D9EC /* SwipeAction.swift */,
+				0DBFB5062B59CDF20091D9EC /* CardView.swift */,
+				0DBFB5082B59D9050091D9EC /* TransactionCardView.swift */,
+				0DBFB50C2B5A851A0091D9EC /* DateFilterView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +234,8 @@
 				0DBFB4EF2B4D53670091D9EC /* Constants.swift in Sources */,
 				0DBFB4DC2B4D4EF70091D9EC /* ContentView.swift in Sources */,
 				0DBFB4F52B593C140091D9EC /* Transaction.swift in Sources */,
+				0DBFB5092B59D9050091D9EC /* TransactionCardView.swift in Sources */,
+				0DBFB50D2B5A851A0091D9EC /* DateFilterView.swift in Sources */,
 				0DBFB4DE2B4D4EF70091D9EC /* Item.swift in Sources */,
 				0DBFB4FA2B593FCA0091D9EC /* Recents.swift in Sources */,
 				0DBFB5042B5980850091D9EC /* Date+Extensions.swift in Sources */,
@@ -221,7 +243,9 @@
 				0DBFB4DA2B4D4EF70091D9EC /* Money_TrackerApp.swift in Sources */,
 				0DBFB5022B5945F10091D9EC /* View+Extensions.swift in Sources */,
 				0DBFB4EC2B4D4F4C0091D9EC /* InfoScreen.swift in Sources */,
+				0DBFB50B2B5A82E40091D9EC /* SwipeAction.swift in Sources */,
 				0DBFB4F72B593CF50091D9EC /* TintColor.swift in Sources */,
+				0DBFB5072B59CDF20091D9EC /* CardView.swift in Sources */,
 				0DBFB4F32B593BDE0091D9EC /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
