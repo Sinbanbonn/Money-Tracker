@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DACDEAA2B5D73D900C3622D /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACDEA92B5D73D900C3622D /* LockView.swift */; };
 		0DBFB4DA2B4D4EF70091D9EC /* Money_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4D92B4D4EF70091D9EC /* Money_TrackerApp.swift */; };
 		0DBFB4DC2B4D4EF70091D9EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4DB2B4D4EF70091D9EC /* ContentView.swift */; };
 		0DBFB4DE2B4D4EF70091D9EC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4DD2B4D4EF70091D9EC /* Item.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DACDEA92B5D73D900C3622D /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		0DBFB4D62B4D4EF70091D9EC /* Money Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBFB4D92B4D4EF70091D9EC /* Money_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money_TrackerApp.swift; sourceTree = "<group>"; };
 		0DBFB4DB2B4D4EF70091D9EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		0DBFB5052B59CDE30091D9EC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0DACDEA92B5D73D900C3622D /* LockView.swift */,
 				0DBFB50A2B5A82E40091D9EC /* SwipeAction.swift */,
 				0DBFB5062B59CDF20091D9EC /* CardView.swift */,
 				0DBFB5082B59D9050091D9EC /* TransactionCardView.swift */,
@@ -241,6 +244,7 @@
 				0DBFB5042B5980850091D9EC /* Date+Extensions.swift in Sources */,
 				0DBFB4F12B5875C80091D9EC /* Tab.swift in Sources */,
 				0DBFB4DA2B4D4EF70091D9EC /* Money_TrackerApp.swift in Sources */,
+				0DACDEAA2B5D73D900C3622D /* LockView.swift in Sources */,
 				0DBFB5022B5945F10091D9EC /* View+Extensions.swift in Sources */,
 				0DBFB4EC2B4D4F4C0091D9EC /* InfoScreen.swift in Sources */,
 				0DBFB50B2B5A82E40091D9EC /* SwipeAction.swift in Sources */,
@@ -383,6 +387,7 @@
 				DEVELOPMENT_TEAM = J4LBW5W7LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = Desc;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -412,6 +417,7 @@
 				DEVELOPMENT_TEAM = J4LBW5W7LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = Desc;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
