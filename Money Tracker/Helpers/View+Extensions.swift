@@ -39,4 +39,8 @@ extension View {
         
         return formatter.string(from: .init(value: value)) ?? ""
     }
+    
+    var currencySymbol: String {
+        Locale.current.currencySymbol ?? ""
+    }
 }

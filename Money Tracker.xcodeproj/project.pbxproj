@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0DACDEAA2B5D73D900C3622D /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACDEA92B5D73D900C3622D /* LockView.swift */; };
+		0DACDEAC2B5D882100C3622D /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACDEAB2B5D882100C3622D /* NewExpenseView.swift */; };
 		0DBFB4DA2B4D4EF70091D9EC /* Money_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4D92B4D4EF70091D9EC /* Money_TrackerApp.swift */; };
 		0DBFB4DC2B4D4EF70091D9EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4DB2B4D4EF70091D9EC /* ContentView.swift */; };
 		0DBFB4DE2B4D4EF70091D9EC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFB4DD2B4D4EF70091D9EC /* Item.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0DACDEA92B5D73D900C3622D /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		0DACDEAB2B5D882100C3622D /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		0DBFB4D62B4D4EF70091D9EC /* Money Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBFB4D92B4D4EF70091D9EC /* Money_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money_TrackerApp.swift; sourceTree = "<group>"; };
 		0DBFB4DB2B4D4EF70091D9EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				0DBFB5052B59CDE30091D9EC /* Helpers */,
 				0DBFB4F82B593FAB0091D9EC /* TabViews */,
 				0DBFB4EB2B4D4F4C0091D9EC /* InfoScreen.swift */,
+				0DACDEAB2B5D882100C3622D /* NewExpenseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				0DBFB4FE2B5940250091D9EC /* Graphs.swift in Sources */,
 				0DBFB4FC2B593FE00091D9EC /* Search.swift in Sources */,
+				0DACDEAC2B5D882100C3622D /* NewExpenseView.swift in Sources */,
 				0DBFB5002B5940310091D9EC /* Settings.swift in Sources */,
 				0DBFB4EF2B4D53670091D9EC /* Constants.swift in Sources */,
 				0DBFB4DC2B4D4EF70091D9EC /* ContentView.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Recents: View {
     // MARK: - User Properties
@@ -19,6 +20,7 @@ struct Recents: View {
     
     // MARK: - Animation Properties
     @Namespace private var animation
+    @Query(sort: [SortDescriptor(\Transaction.dateAdded, order: .reverse)], animation: .snappy) private var transactions: [Transaction]
     
     var body: some View {
         GeometryReader {
@@ -44,8 +46,14 @@ struct Recents: View {
                             CustomSegmentedControl()
                                 .padding(.bottom, 10)
                             
-                            ForEach(sampleTransactions.filter({$0.category == selectedCateory.rawValue})) { transaction in
+                            ForEach(transactions) { transaction in
+                                NavigationLink {
+                                    NewExpenseView(editTransaction: transaction)
+                                }
+                            label: {
                                 TransactionCardView(transaction: transaction)
+                            }
+                            .buttonStyle(.plain)
                                 
                             }
                         } header: {
@@ -96,7 +104,7 @@ struct Recents: View {
             Spacer(minLength: 0)
             
             NavigationLink {
-                
+                NewExpenseView()
             } label: {
                 Image(systemName: "plus")
                     .font(.title3)
@@ -167,6 +175,8 @@ struct Recents: View {
         
         return 1 + scale
     }
+    
+    
 }
 
 #Preview {

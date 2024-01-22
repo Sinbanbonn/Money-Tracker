@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TransactionCardView: View {
+    // MARK: - Enviroment property
+    @Environment(\.modelContext) private var context
+    
     var transaction: Transaction
     var body: some View {
         SwipeAction(cornerRadius: 10, direction: .trailing) {
@@ -43,12 +46,13 @@ struct TransactionCardView: View {
             .background(.background, in: .rect(cornerRadius: 10))
         } actions: {
             Action(tint: .red, icon: "trash") {
-                // TODO: - Later
+                context.delete(transaction)
             }
         }
     }
+    
 }
 
 #Preview {
-    TransactionCardView(transaction: sampleTransactions[0])
+    ContentView()
 }
