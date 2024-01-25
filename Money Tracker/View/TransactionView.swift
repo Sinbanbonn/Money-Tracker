@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewExpenseView: View {
+struct TransactionView: View {
     // MARK: - View Properties
     @State private var title: String = ""
     @State private var remarks: String = ""
