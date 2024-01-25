@@ -21,7 +21,7 @@ struct Search: View {
         NavigationStack {
             ScrollView(.vertical) {
                 LazyVStack(spacing: 12) {
-                    FilterTransactionView(category: selectedCategory, searchText: searchText) { transactions in
+                    FilterTransactionsView(category: selectedCategory, searchText: searchText) { transactions in
                         ForEach(transactions) { transaction in
                             NavigationLink {
                                 TransactionView(editTransaction: transaction)

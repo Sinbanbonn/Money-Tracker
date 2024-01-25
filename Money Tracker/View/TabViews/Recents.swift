@@ -39,7 +39,7 @@ struct Recents: View {
                             }
                             .hSpacing(.leading)
                             
-                            FilterTransactionView(startDate: startDate, endDate: endDate) { transaction in
+                            FilterTransactionsView(startDate: startDate, endDate: endDate) { transaction in
                                 /// Card View
                                 CardView(income: total(transactions, category: .income), expense: total(transactions, category: .expense))
                                 
